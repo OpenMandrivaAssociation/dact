@@ -10,6 +10,7 @@ Source0: http://www.rkeene.org/files/oss/dact/%{name}-%{version}.tar.bz2
 License: LGPL
 Group: Archiving/Compression
 Url: http://www.rkeene.org/oss/dact/
+BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildRequires: liblzo-devel
 BuildRequires: libbzip2-devel
 BuildRequires: libmcrypt-devel
