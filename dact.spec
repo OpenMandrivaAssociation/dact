@@ -1,6 +1,6 @@
 %define name dact
 %define version 0.8.41
-%define release %mkrel 1
+%define release %mkrel 3
 
 Summary: Dinamically choose best algorithm to compress a file
 Name: %{name}
