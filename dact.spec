@@ -1,12 +1,14 @@
 %define name dact
-%define version 0.8.41
-%define release %mkrel 3
+%define version 0.8.42
+%define release %mkrel 1
+
+%define _disable_ld_no_undefined 1
 
 Summary: Dinamically choose best algorithm to compress a file
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: http://www.rkeene.org/files/oss/dact/%{name}-%{version}.tar.bz2
+Source0: http://www.rkeene.org/files/oss/dact/%{name}-%{version}.tar.gz
 License: LGPL
 Group: Archiving/Compression
 Url: http://www.rkeene.org/oss/dact/
@@ -28,24 +30,24 @@ produce an overall smaller output file.
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
-mkdir -p %buildroot%_bindir
-mkdir -p %buildroot%_sysconfdir
-mkdir -p %buildroot%_mandir/man1
+mkdir -p %{buildroot}%{_bindir}
+mkdir -p %{buildroot}%{_sysconfdir}
+mkdir -p %{buildroot}%{_mandir}/man1
 
 %makeinstall
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
 %doc MD5SUMS README TODO.ideas TODO VERSION ChangeLog AUTHORS
 %doc Docs/config_help.txt Docs/dact.txt Docs/helpfile.txt
-%config(noreplace) %_sysconfdir/%name.conf
-%_bindir/%name
-%dir %_datadir/%name
-%_libdir/lib%name.*
-%_mandir/man1/%name.*
+%config(noreplace) %{_sysconfdir}/%{name}.conf
+%{_bindir}/%{name}
+%dir %{_datadir}/%{name}
+%{_libdir}/lib%{name}.*
+%{_mandir}/man1/%{name}.*
 
