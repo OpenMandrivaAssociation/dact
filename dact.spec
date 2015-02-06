@@ -3,7 +3,7 @@
 Summary:	Dinamically choose best algorithm to compress a file
 Name:		dact
 Version:	0.8.42
-Release:	2
+Release:	3
 License:	LGPL
 Group:		Archiving/Compression
 Url:		http://www.rkeene.org/oss/dact/
