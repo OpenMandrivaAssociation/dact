@@ -6,7 +6,7 @@ Version:	0.8.42
 Release:	3
 License:	LGPL
 Group:		Archiving/Compression
-Url:		http://www.rkeene.org/oss/dact/
+Url:		https://www.rkeene.org/oss/dact/
 Source:		http://www.rkeene.org/files/oss/dact/release/%{name}-%{version}.tar.gz
 BuildRequires:	bzip2-devel
 BuildRequires:	liblzo-devel
